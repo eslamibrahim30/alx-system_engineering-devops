@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "./, ../, $(ls -ApmX --group-directories-first)${NEWLINE}"
+echo -e "./, ../, $(ls -ApmX)${NEWLINE}"
