@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "./, ../, $(ls -Apmv)${NEWLINE}"
+ls -apmv
