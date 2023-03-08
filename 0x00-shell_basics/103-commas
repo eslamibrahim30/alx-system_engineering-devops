@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "./, ../, $(ls -ApmX)${NEWLINE}"
+echo -e "./, ../, $(ls -Apmv)${NEWLINE}"
