@@ -1,2 +1,2 @@
 #!/bin/bash
-tr 'EveryoneisaproponentofstrongencryptionDorothyEDenning' 'RirelbarvfncebcbaragbsfgebatrapelcgvbaQbebgulRQraavat'
+tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
