@@ -1,7 +1,7 @@
 # Command line for the win
 
 This project's screenshots were uploaded to the sandbox environment using the SFTP (Secure File Transfer Protocol) command-line tool. I followed these steps to upload them :-  
-	1 - I connected to the sandbox from my local machine using this command:  
+&emsp;1 - I connected to the sandbox from my local machine using this command:  
 		**sftp user@server_ipaddress**  
 	2 - After that I entered the password which was provided by the sandboxes interface.  
 	3 - After I connected to the sandbox using though my local machine, I used this command to navigate to the project directory:  
