@@ -1,4 +1,4 @@
-#Command_line_for_the_win
+**Command line for the win**
 
 This project's screenshots were uploaded to the sandbox environment using the SFTP (Secure File Transfer Protocol) command-line tool. I followed these steps to upload them :-
 	1 - I connected to the sandbox from my local machine using this command:
