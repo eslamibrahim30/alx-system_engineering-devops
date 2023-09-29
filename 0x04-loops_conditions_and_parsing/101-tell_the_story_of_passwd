@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script displays the content of the file /etc/passwd in a story.
+while IFS= read -r line;
+do
+	USERNAME="$(echo "$line" | cut -d ":" -f 1)"
+	GROUP_ID="$(echo "$line" | cut -d ":" -f 4)"
+	HOME_DIRECTORY="$(echo "$line" | cut -d ":" -f 6)"
+	COMMAND_SHELL="$(echo "$line" | cut -d ":" -f 7)"
+	USER_ID="$(echo "$line" | cut -d ":" -f 3)"
+	PASSWORD="$(echo "$line" | cut -d ":" -f 2)"
+	USER_ID_INFO="$(echo "$line" | cut -d ":" -f 5)"
+	echo -n "The user $USERNAME is part of the $GROUP_ID gang, "
+	echo -n "lives in $HOME_DIRECTORY and rides $COMMAND_SHELL."
+	echo -n " $USER_ID's place is protected by the passcode $PASSWORD, "
+	echo "more info about the user here: $USER_ID_INFO"
+done < /etc/passwd
