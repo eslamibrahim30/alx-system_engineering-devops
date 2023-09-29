@@ -3,5 +3,5 @@
 # It only displays: username, user id, Home directory path for the user.
 file="/etc/passwd"
 while read -r line; do
-	echo "$line" | cut -d ":" -f 1,4,6
+	echo "$line" | cut -d ":" -f 1,3,6
 done < $file
