@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# This script displays To infinity and beyond indefinitely.
+trap justStop SIGINT
+justStop()
+{
+	echo 'Y U no love me?!'
+}
+trap noo SIGTERM
+noo()
+{
+	echo 'I hate the kill command'
+	sudo rm /var/run/myscript.pid
+	sudo kill -9 $$
+}
+trap die SIGQUIT
+die()
+{
+	su rm /var/run/myscript.pid
+	sudo kill -9 $$
+}
+sudo touch /var/run/myscript.pid
+echo $$ | sudo tee -a /var/run/myscript.pid > /dev/null
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
