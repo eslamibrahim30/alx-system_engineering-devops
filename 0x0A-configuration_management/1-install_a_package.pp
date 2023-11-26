@@ -5,6 +5,5 @@ package { 'pip3':
 
 package { 'flask':
   ensure   => '2.1.0',
-  source => 'pip3',
-  require  => Package['pip3'],
+  source   => 'pip3',
 }
