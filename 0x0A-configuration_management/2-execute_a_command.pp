@@ -1,0 +1,4 @@
+# This manifest kills a process named killmenow
+exec { 'pkill killmenow':
+  command => 'pkill killmenow',
+}
