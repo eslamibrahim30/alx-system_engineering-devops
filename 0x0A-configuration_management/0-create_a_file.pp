@@ -1,5 +1,5 @@
 # create a file in /tmp
-file { '/tmp/school':
+file { 'school':
   ensure  => present,
   path    => '/tmp',
   content => 'I love Puppet',
