@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# fix empty reply
+echo "ServerName localhost" >> /etc/apache2/apache2.conf
