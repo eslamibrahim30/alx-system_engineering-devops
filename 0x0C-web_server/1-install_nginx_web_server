@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # Install nginx web server
 sudo apt-get install -y nginx
-sudo echo 'Hello World!' > /var/www/html/index.html
+echo "Hello World!" > /usr/share/nginx/html/index.html
+sudo service nginx start
