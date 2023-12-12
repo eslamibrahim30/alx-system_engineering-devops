@@ -4,7 +4,6 @@ sudo apt-get update
 sudo apt-get install -y nginx
 sudo service nginx start
 sudo touch /var/www/html/error-404.html
-sudo echo "Ceci n'est pas une page" | tee -a /var/www/html/error-404.html > /dev/null
-sudo chown www-data:www-data /var/www/html/error-404.html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error-404.html > /dev/null
 sudo sed -i '/http {/a \\t\\terror_page 404 \/error-404.html;' /etc/nginx/nginx.conf
 sudo service nginx restart
