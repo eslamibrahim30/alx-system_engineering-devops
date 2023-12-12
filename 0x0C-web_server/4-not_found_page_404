@@ -5,6 +5,5 @@ sudo apt-get install -y nginx
 sudo service nginx start
 sudo touch /var/www/html/error-404.html
 echo "Ceci n'est pas une page" | sudo tee /var/www/html/error-404.html > /dev/null
-sudo sed -i '/server_name _;/a \\t\\terror_page 404 \/error-404.html;' /etc/nginx/sites-available/default
-sudo sed -i '/http {/a \\t\\terror_page 404 \/error-404.html;' /etc/nginx/nginx.conf
+sudo sed -i '/http {/a \\t\\terror_page 404 \/error-404.html;\\nlocation = /error_404.html {root /usr/share/nginx/html;internal;}' /etc/nginx/sites-available/default
 sudo service nginx restart
