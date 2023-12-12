@@ -2,9 +2,10 @@
 # Not found page 404
 apt-get update
 sudo apt-get install -y nginx
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
 sudo service nginx start
 sudo sed -i '/server_name _;/a \\n    location \/redirect_me {\n        return 301 '"https://www.youtube.com/watch?v=QH2-TGUlwu4"';\n    }\n' /etc/nginx/sites-available/default
 sudo service nginx restart
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/error_404.html > /dev/null
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/error_404.html
 sudo sed -i '/server_name _;/a \\n \\t\\terror_page 404 \/error-404.html;' /etc/nginx/sites-available/default
 sudo service nginx restart
