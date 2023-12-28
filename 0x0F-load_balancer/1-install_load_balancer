@@ -30,7 +30,7 @@ frontend myfrontend
 backend mybackend
     mode http
     balance roundrobin
-    server 384035-web-01 54.209.215.54:80 check
-    server 384035-web-02 54.237.40.45:80 check
+    server web-01 54.209.215.54:80 check
+    server web-02 54.237.40.45:80 check
 EOL
 sudo service haproxy restart
