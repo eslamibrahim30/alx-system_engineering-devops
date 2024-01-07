@@ -22,4 +22,4 @@ if __name__ == "__main__":
     print("Employee {} is done with tasks".format(EMPLOYEE_NAME), end="")
     print("({}/{}):".format(NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
     for task in UNDONE_TASKS:
-        print("\t{}".format(task))
+        print("\t {}".format(task))
