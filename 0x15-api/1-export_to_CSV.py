@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ This module returns information about employee's TODO list progress """
+import csv
 import requests
 import sys
-import csv
 
 
 if __name__ == "__main__":
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     username = user.get("username")
     filename = "{}.csv".format(employeeID)
     f = open(filename, 'w')
-    writer = csv.writer(f)
+    writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
     for task in todos:
         if task.get("userId") == employeeID:
             row = [
