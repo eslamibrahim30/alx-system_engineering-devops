@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module returns information about employee's TODO list progress """
 import requests
 import sys
 if __name__ == "__main__":
