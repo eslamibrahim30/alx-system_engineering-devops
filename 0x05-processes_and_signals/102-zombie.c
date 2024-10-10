@@ -31,7 +31,11 @@ int main(void)
 	for (i = 0; i < 5; i++)
 	{
 		pid = fork();
-		if (pid == 0)
+		if (pid < 0)
+		{
+			exit(EXIT_FAILURE);
+		}
+		else if (pid == 0)
 		{
 			printf("Zombie process created, PID: %d\n", getpid());
 			exit(EXIT_SUCCESS);
