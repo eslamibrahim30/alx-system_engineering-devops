@@ -20,12 +20,10 @@ int infinite_while(void)
 
 /**
  * main - Entry point
- * @argc: the number of arguments of the main function
- * @argv: the actual arguments of the main function
  *
  * Return: Always 0 (Success)
  */
-int main(int argc, char **argv)
+int main(void)
 {
 	int i = 0;
 	pid_t pid = 0;
