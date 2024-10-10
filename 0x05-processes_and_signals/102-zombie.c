@@ -34,7 +34,7 @@ int main(void)
 		if (pid == 0)
 		{
 			printf("Zombie process created, PID: %d\n", getpid());
-			kill(getpid(), 9);
+			exit(EXIT_SUCCESS);
 		}
 	}
 	if (pid != 0)
