@@ -36,15 +36,12 @@ int main(int argc, char **argv)
 		if (pid == 0)
 		{
 			printf("Zombie process created, PID: %d\n", getpid());
-			infinite_while();
-		}
-		else
-		{
-			sleep(1);
-			kill(pid, 9);
+			kill(getpid(), 9);
 		}
 	}
 	if (pid != 0)
-		sleep(100);
+	{
+		infinite_while();
+	}
 	return (0);
 }
